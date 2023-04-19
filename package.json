@@ -1,0 +1,26 @@
+{
+  "name": "formation-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app-async-cb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/nodemon app5.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecrireunprogramme/formation-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecrireunprogramme/formation-nodejs/issues"
+  },
+  "homepage": "https://github.com/ecrireunprogramme/formation-nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {}
+}
