@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const _ = require('lodash');
 
 const port = 5000;
 
@@ -19,7 +20,7 @@ http.createServer((req, res) => {
 
     case '/contacts':
       res.writeHead(200, {'Content-Type': 'text/html'});
-      res.write('Page contact');
+      res.write('Page contact mise à jour');
       break;
 
     default:
