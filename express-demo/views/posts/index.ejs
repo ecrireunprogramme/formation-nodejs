@@ -1,0 +1,21 @@
+<%- include("../partials/header.ejs") %>
+
+<h1>Liste des posts</h1>
+<ul>
+  <li><a href="/">Accueil</a></li>
+</ul>
+
+<ul>
+  <li><a href="/posts/new">Nouveau post</a></li>
+</ul>
+
+<% for( let i = 0; i < posts.length; i++ ) { %>
+  <hr>
+  <p><%= posts[i].id %></p>
+  <p><%= posts[i].title %></p>
+  <p><i><%= posts[i].author %></i></p>
+  <p><i><%= posts[i].date %></i></p>
+  <a href="/posts/<%= posts[i].id %>">Voir</a>
+<% } %>
+
+<%- include("../partials/footer.ejs") %>
