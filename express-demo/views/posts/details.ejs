@@ -7,5 +7,7 @@
 <p><i><%= post.date %></i></p>
 
 <a href="/posts">Liste</a>
+<a href="/posts/edit/<%= post.id %>">Modifier</a>
+<a href="/posts/delete/<%= post.id %>">Supprimer</a>
   
 <%- include("../partials/footer.ejs") %>
