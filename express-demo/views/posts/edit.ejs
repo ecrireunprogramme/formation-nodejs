@@ -1,19 +1,16 @@
 <%- include("../partials/header.ejs") %>
 
-<h1>Nouveau post</h1>
+<h1>Modification du post</h1>
 
-<form action="/posts" method="post">
+<form action="/posts/edit/<%= post._id %>" method="post">
   <label for="title">Titre</label>
   <input type="text" name="title" value="<%= post.title %>"> <br>
-  <span style="color: red;"><%= errors['title'] %></span> <br>
 
   <label for="title">Contenu</label>
   <textarea name="content" id="content" cols="30" rows="10"><%= post.content %></textarea> <br>
-  <span style="color: red;"><%= errors['content'] %></span> <br>
 
   <label for="title">Auteur</label>
   <input type="text" name="author" value="<%= post.author %>"> <br>
-  <span style="color: red;"><%= errors['author'] %></span> <br>
 
   <button type="submit">Créer</button>
 </form>

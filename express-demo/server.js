@@ -1,6 +1,8 @@
 const express = require('express');
+require('dotenv').config();
 const postRoutes = require('./routes/postRoutes');
 const logger = require('./middlewares/logger');
+const connectMongoDb = require('./config/dbConfig');
 
 const app = express();
 
@@ -18,7 +20,24 @@ app.get('/', (req, res) => {
   res.render('index', { nomUtilisateur: name });
 });
 
+app.get('/notfound', (req, res) => {
+  res.render('notfound');
+});
+
 app.use('/posts', postRoutes);
 
-app.listen(port, 
-    () => console.log('En écoute sur le port', port));
+const startup = async () => {
+  try { 
+    await connectMongoDb(process.env.MONGO_URI);
+
+    app.listen(port, 
+      () => console.log('En écoute sur le port', port));
+  } catch (err) {
+    console.log('Une erreur est survenue', err);
+    throw err;
+  }
+}
+
+startup();
+
+
