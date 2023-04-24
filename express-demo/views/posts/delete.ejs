@@ -1,0 +1,13 @@
+<%- include("../partials/header.ejs") %>
+
+<p>
+  Voulez-vous supprimer le post 
+  <b><%= post.title %></b> de <i><i><%= post.author %></i> ?
+</p>
+
+<form action="/posts/delete/<%= post._id %>" method="post">
+  <a href="/posts/<%= post.id %>">Annuler</a>
+  <button type="submit">Supprimer</button>
+</form>
+
+<%- include("../partials/footer.ejs") %>
