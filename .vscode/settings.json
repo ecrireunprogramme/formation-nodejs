@@ -1,6 +1,4 @@
 {
-  "appService.defaultWebAppToDeploy": "/subscriptions/37c6c4fe-c0bc-4f87-a3db-e511e0a7e226/resourceGroups/formation-nodejs/providers/Microsoft.Web/sites/eup-express-demo",
-  "appService.deploySubpath": "express-demo",
   "appService.zipIgnorePattern": [
     "node_modules{,/**}",
     ".env"
