@@ -12,7 +12,7 @@ app.use(express.static('public'));
 //app.use(logger);
 //app.set('views', path.join(__dirname, 'views'));
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
   const name = 'Darius Tsafack';
